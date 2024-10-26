@@ -29,4 +29,23 @@ public class ServiciosGrupo {
 		}
 	}
 	
+	
+	@Path("probarEliminar")
+	@POST
+	@Consumes(MediaType.APPLICATION_JSON)
+
+	public Response eliminar(String codGrupo) {
+		GrupoBDD grupo = new GrupoBDD();
+		try {
+			grupo.eliminar(codGrupo);
+			return Response.ok().build();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return Response.serverError().build();
+		}
+		
+	
+	}
+	
 }
