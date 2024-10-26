@@ -13,7 +13,7 @@ import com.krakedev.moduloii.evaluacionfinal.persistencia.ArticulosBDD;
 
 @Path("articulo")
 public class ServiciosArticulos {
-	@Path("insertar")
+	@Path("insertarArticulo")
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     public Response insertar(Articulo articulo) {
