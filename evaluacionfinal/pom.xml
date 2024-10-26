@@ -23,11 +23,38 @@
             <version>${jakartaee}</version>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-        	<groupId>com.krakedev</groupId>
-        	<artifactId>repaso</artifactId>
-        	<version>1.0.0</version>
+       <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+            <version>${jakartaee}</version>
+            <scope>provided</scope>
         </dependency>
+        <dependency>
+			<groupId>javax.ws.rs</groupId>
+			<artifactId>javax.ws.rs-api</artifactId>
+			<version>2.1.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.glassfish.jersey.containers</groupId>
+			<artifactId>jersey-container-servlet</artifactId>
+			<version>2.29.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.inject</groupId>
+			<artifactId>jersey-hk2</artifactId>
+			<version>2.29.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.media</groupId>
+			<artifactId>jersey-media-json-jackson</artifactId>
+			<version>2.25</version>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.bundles.repackaged</groupId>
+			<artifactId>jersey-guava</artifactId>
+			<version>2.6</version>
+		</dependency>
     </dependencies>
     
      <build>
