@@ -17,7 +17,7 @@ public class ArticulosBDD {
 		try {
 			con = ConexionBDD.obtenerConexion();
 			PreparedStatement ps = null;
-			con.prepareStatement("insert into articulos(idA, nombre, precio_venta, precio_compra, id_grupos, estado) values "
+			con.prepareStatement("insert into articulos(id_articulo, nombre, precio_venta, precio_compra, id_grupo, estado) values "
 					+ "(?,?,?,?,?)");
 			ps.setString(1, articulo.getId());
 			ps.setString(2, articulo.getNombre());

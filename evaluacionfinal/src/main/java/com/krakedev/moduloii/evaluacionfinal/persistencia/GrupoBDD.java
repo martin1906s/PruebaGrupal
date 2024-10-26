@@ -14,7 +14,7 @@ public class GrupoBDD {
 		Connection con=null;
 		try {
 			con=ConexionBDD.obtenerConexion();
-			PreparedStatement ps = con.prepareStatement("insert into grupo (id,nombre) values(?,?)");
+			PreparedStatement ps = con.prepareStatement("insert into grupos (id_grupo,nombre) values(?,?)");
 			ps.setString(1, grupo.getId());
 			ps.setString(2, grupo.getNombre());
 			ps.executeUpdate();
