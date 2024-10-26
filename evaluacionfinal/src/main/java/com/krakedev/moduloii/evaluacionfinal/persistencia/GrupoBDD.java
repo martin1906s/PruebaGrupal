@@ -28,4 +28,39 @@ public class GrupoBDD {
 		}
 		
 	}
+	
+	public void eliminar(String CodGrupo) throws Exception {
+	    Connection con = null;
+	    PreparedStatement ps = null;
+
+	    String sqlRegistroMovimiento = "DELETE FROM Registro_movimiento WHERE id_articulo IN (SELECT id FROM Articulos WHERE id_grupo = ?)";
+	    String sqlArticulos = "DELETE FROM Articulos WHERE id_grupo = ?";
+	    String sqlGrupo = "DELETE FROM Grupo WHERE id = ?";
+
+	    try {
+	        con = ConexionBDD.obtenerConexion();
+	        con.setAutoCommit(false); // 
+
+	       
+	        ps = con.prepareStatement(sqlRegistroMovimiento);
+	        ps.setString(1, CodGrupo);
+	        ps.executeUpdate();
+
+	        ps = con.prepareStatement(sqlArticulos);
+	        ps.setString(1, CodGrupo);
+	        ps.executeUpdate();
+
+	        ps = con.prepareStatement(sqlGrupo);
+	        ps.setString(1, CodGrupo);
+	        ps.executeUpdate();
+
+	        System.out.println("Eliminación exitosa");
+	    } catch (Exception e) {
+
+	        throw e;
+	    } finally {
+	    	con.close();
+	    }
+	}
+	
 }
