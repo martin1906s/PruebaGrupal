@@ -9,7 +9,7 @@ import javax.ws.rs.core.Response;
 import com.krakedev.excepciones.KrakeDevExcepcion;
 import com.krakedev.moduloii.evaluacionfinal.entidades.Grupo;
 import com.krakedev.moduloii.evaluacionfinal.persistencia.GrupoBDD;
-@Path("funciones")
+@Path("grupos")
 
 public class ServiciosGrupo {
 	

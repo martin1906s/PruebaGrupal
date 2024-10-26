@@ -16,7 +16,7 @@ import com.krakedev.moduloii.evaluacionfinal.entidades.RegistroMovimiento;
 import com.krakedev.moduloii.evaluacionfinal.persistencia.MovimientosBDD;
 
 
-@Path("funciones")
+@Path("movimientos")
 public class ServicioMovimientos {
 
 		@Path("probarInsertar")
